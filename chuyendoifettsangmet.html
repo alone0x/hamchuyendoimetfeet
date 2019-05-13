@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="id"><br>
+<select id = "select1"><br>
+    <option value="1">metter</option>
+    <option value="3.297">feet</option>
+</select>
+<select id = "select2"><br>
+    <option value="1">metter</option>
+    <option value="3.297">feet</option>
+</select>
+<button onclick="main()">chuyển đổi</button>
+<script>
+    function nhap() {
+        x = parseFloat(document.getElementById("id").value);
+        return x;
+    }
+    function chuyenDoi(abc) {
+        x = abc*parseFloat(document.getElementById("select1").value)/parseFloat(document.getElementById("select2").value);
+        console.log(x);
+        return x;
+    }
+    function hienThi() {
+        alert(x);
+    }
+    function main() {
+        x = nhap();
+        cd = chuyenDoi(x);
+        console.log(cd);
+        hienThi(cd);
+    }
+</script>
+</body>
+</html>
